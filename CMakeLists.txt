@@ -3,6 +3,8 @@ project(yaml-fortran LANGUAGES CXX C Fortran)
 
 set(CMAKE_CXX_STANDARD 17)
 
+enable_testing()
+
 include("cmake/YamlFortran_Functions.cmake")
 include(FetchContent)
 

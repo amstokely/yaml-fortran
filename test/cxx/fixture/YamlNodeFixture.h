@@ -1,18 +1,17 @@
-#ifndef IODASCHEMAFIXTURE_H
-#define IODASCHEMAFIXTURE_H
+#ifndef YAMLNODEFIXTURE_H
+#define YAMLNODEFIXTURE_H
 
 #include <gtest/gtest.h>
 #include "yaml-cpp/yaml.h"
-#include "ioda_obs_schema.h"
 
-class IodaObsSchemaFixture : public ::testing::Test {
+class YamlNodeFixture : public ::testing::Test {
 protected:
     void SetUp() override;
 
     void TearDown() override;
 
-    YAML::Node schema;
-    std::shared_ptr<IodaObsSchema> iodaSchema;
+    YAML::Node node;
+
 };
 
-#endif //IODASCHEMAFIXTURE_H
+#endif // YAMLNODEFIXTURE_H
