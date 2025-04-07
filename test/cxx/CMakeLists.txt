@@ -6,22 +6,22 @@ FETCHCONTENT_DECLARE(
 FETCHCONTENT_MAKEAVAILABLE(googletest)
 include(${CMAKE_SOURCE_DIR}/test/cmake/YamlFortran_Test_functions.cmake)
 
-set(YamlNode_Test_SOURCES
-        test_YamlNode.cc
-        fixture/YamlNodeFixture.cc
+set(YamlFortran_Test_SOURCES
+        test_YamlFortran.cc
+        fixture/YamlFortranFixture.cc
 )
-list(TRANSFORM YamlNode_Test_SOURCES PREPEND ${CMAKE_CURRENT_SOURCE_DIR}/)
-set(YamlNode_Test_INCLUDE_DIRECTORIES
+list(TRANSFORM YamlFortran_Test_SOURCES PREPEND ${CMAKE_CURRENT_SOURCE_DIR}/)
+set(YamlFortran_Test_INCLUDE_DIRECTORIES
         ${CMAKE_CURRENT_SOURCE_DIR}/fixture
 )
-set(YamlNode_Test_LINK_LIBRARIES
+set(YamlFortran_Test_LINK_LIBRARIES
          yaml-cpp::yaml-cpp GTest::gtest_main yaml-fortran_cxx
 )
 add_cxx_ctest(
-        YamlNode_Test
-        "${YamlNode_Test_SOURCES}"
-        "${YamlNode_Test_INCLUDE_DIRECTORIES}"
-        "${YamlNode_Test_LINK_LIBRARIES}"
+        YamlFortran_Test
+        "${YamlFortran_Test_SOURCES}"
+        "${YamlFortran_Test_INCLUDE_DIRECTORIES}"
+        "${YamlFortran_Test_LINK_LIBRARIES}"
 )
 
 

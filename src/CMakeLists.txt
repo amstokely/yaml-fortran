@@ -1,4 +1,4 @@
-set(yaml-fortran_cxx_SOURCES yaml_node.cc)
+set(yaml-fortran_cxx_SOURCES yaml_fortran.cc)
 list(TRANSFORM yaml-fortran_cxx_SOURCES PREPEND "${CMAKE_CURRENT_SOURCE_DIR}/")
 set(yaml-fortran_cxx_INCLUDE_DIRECTORIES "include")
 list(TRANSFORM yaml-fortran_cxx_INCLUDE_DIRECTORIES PREPEND "${CMAKE_SOURCE_DIR}/")
